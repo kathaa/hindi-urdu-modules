@@ -6,7 +6,7 @@ module.exports = function (kathaa_inputs, progress, done){
   hindi_urdu_request.post({
     headers: {'content-type' : 'application/x-www-form-urlencoded;charset=UTF-8'},
     url:     'http://api.ilmt.iiit.ac.in/hin/urd/7/7',
-    body:    "pickonemorph="+encodeURI(kathaa_inputs['in_ssf'])
+    body:    "input="+encodeURI(kathaa_inputs['in_ssf'])
   }, function(error, response, body){
     if (!error && response.statusCode == 200) {
       try{
